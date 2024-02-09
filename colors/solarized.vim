@@ -244,10 +244,17 @@ if (has("gui_running") && g:solarized_degrade == 0)
     let s:vmode       = "gui"
     let s:base03      = "#002b36"
     let s:base02      = "#073642"
-    let s:base01      = "#586e75"
-    let s:base00      = "#657b83"
-    let s:base0       = "#839496"
-    let s:base1       = "#93a1a1"
+    if g:solarized_brighter == 1
+        let s:base01      = "#787878" " comments
+        let s:base00      = "#888888" " comments
+        let s:base0       = "#c0c0c0" " code
+        let s:base1       = "#c8c8c8" " code
+    else
+        let s:base01      = "#586e75"
+        let s:base00      = "#657b83"
+        let s:base0       = "#839496"
+        let s:base1       = "#93a1a1"
+    endif
     let s:base2       = "#eee8d5"
     let s:base3       = "#fdf6e3"
     let s:yellow      = "#b58900"
@@ -302,10 +309,17 @@ elseif g:solarized_termcolors == 256
     let s:vmode       = "cterm"
     let s:base03      = "234"
     let s:base02      = "235"
-    let s:base01      = "239"
-    let s:base00      = "240"
-    let s:base0       = "244"
-    let s:base1       = "245"
+    if g:solarized_brighter == 1
+        let s:base01      = "244" " comments
+        let s:base00      = "245" " comments
+        let s:base0       = "251" " code
+        let s:base1       = "252" " code
+    else
+        let s:base01      = "239"
+        let s:base00      = "240"
+        let s:base0       = "244"
+        let s:base1       = "245"
+    endif
     let s:base2       = "187"
     let s:base3       = "230"
     let s:yellow      = "136"
