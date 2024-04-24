@@ -230,6 +230,9 @@ if exists("syntax_on")
   syntax reset
 endif
 let colors_name = "solarized"
+if !exists('g:solarized_brighter')
+  let g:solarized_brighter = 0
+endif
 
 "}}}
 " GUI & CSApprox hexadecimal palettes"{{{
